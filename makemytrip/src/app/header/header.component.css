@@ -1,0 +1,55 @@
+
+.headr{
+    height: 70px;
+    width: 100%;
+    background-image: linear-gradient(#061628,#0c2b4e,#134175);
+}
+.head1{
+    height: 70px;
+    width: 100%;
+    /*background-image: linear-gradient(#061628,#0c2b4e,#134175);*/
+    background-color: #061628;
+}
+.logo{
+    height: 70px;
+    width: 30%;
+    float: left;
+    margin-top: -10px;
+    padding-left: 80px;
+
+}
+.logo img{
+    height: 57px;
+    width: 185px;
+    
+}
+.upbar{
+    height: 70px;
+    width: 70%;
+    float: left;
+    padding-top: 5px;
+}
+.upbar a{
+    color: whitesmoke;
+}
+.upbar a.active{
+    color: #94b5db;
+
+}
+.flagSprite.in {
+    width: 15px;
+    height: 12px;
+    background-position: 0 0;
+}
+.flagSprite {
+    background-image: url(//imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/flagSprite.png);
+    background-repeat: no-repeat;
+    background-size: 16px 38px;
+    display: inline-block;
+}
+.sel{
+    border-radius: 2px;
+    color: whitesmoke;
+    background-color: #0c2b4e;
+    margin-left: 3px;
+}

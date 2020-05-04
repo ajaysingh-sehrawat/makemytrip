@@ -1,0 +1,110 @@
+<!--<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+</div>
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>Phone number</mat-label>
+    <example-tel-input required></example-tel-input>
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-hint>Include area code</mat-hint>
+  </mat-form-field>
+</div>-->  
+
+<div class="structure">
+  <form #mytrip="ngForm">
+      
+    <div>
+      <input type="text"
+      placeholder="firstName"
+  
+      required
+               
+      name="firstName1"
+      #firstName="ngModel"
+  
+      class="form-control"
+      [class.is-invalid]="firstName.invalid && firstName.touched"
+      [(ngModel)]="MakemytripmodelForm.firstName"
+        
+      >
+      <!--<span *ngIf="firstName.invalid && firstName.touched" class= "input-group-addon">
+        <i class="fa fa-fw fa-info-circle text-danger " style="height:10px;" aria-hidden="true" ></i> </span> -->
+      
+<small *ngIf="firstName.invalid && firstName.touched" class="text-danger">
+firstname is required
+</small> &nbsp;
+  
+        <input type="text"
+        placeholder="lastName"
+  
+        required
+               
+        name="lastName1"
+        #lastName="ngModel"
+  
+        class="form-control"
+        [class.is-invalid]="lastName.invalid && lastName.touched"
+        [(ngModel)]="MakemytripmodelForm.lastName"
+  
+      >&nbsp;
+
+      <input type="text"
+      placeholder="emailId"
+
+      required
+     
+      name="emailId1"
+      #emailId="ngModel"
+
+      class="form-control"
+      [class.is-invalid]="emailId.invalid && emailId.touched"
+      [(ngModel)]="MakemytripmodelForm.emailId"
+
+     >&nbsp;
+
+      <input type="text"
+      placeholder="Password"
+
+      required
+    
+      name="Password1"
+      #Password="ngModel"
+
+      class="form-control"
+      [class.is-invalid]="Password.invalid && Password.touched"
+      [(ngModel)]="MakemytripmodelForm.Password"
+
+     >&nbsp;
+  
+     <input type="text"
+     placeholder="phoneNumber"
+
+     required
+   
+     name="phoneNumber1"
+     #phoneNumber="ngModel"
+
+     class="form-control"
+     [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched"
+     [(ngModel)]="MakemytripmodelForm.phoneNumber"
+
+    >&nbsp;
+
+    <button type="submit" (click)="customerEntry()" [disabled]="mytrip.form.invalid" class="btn btn-block btn-success">Sign Up</button>
+    </div>
+  </form>
+</div>
+
